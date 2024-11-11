@@ -21,7 +21,7 @@ export default function NoLogged(props){
             path:"/",
             text:"Inicio",
             icon:"bi bi-house-fill",
-            content:<Home/>
+            content:<Home setElementFocus={setElementFocus}/>
         },
         
         {

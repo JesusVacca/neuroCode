@@ -25,6 +25,7 @@ export default function Home(props) {
   useEffect(() => {
     const interval = setInterval(moveRightCarousel, 7000);
     return () => clearInterval(interval);
+    props.setElementFocus(0);
   });
 
   const moveRightCarousel = () => {
