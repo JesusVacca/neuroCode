@@ -2,7 +2,7 @@
   "name": "neuro-code-v-1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://JesusVacca/neuroCode",
+  "homepage": "https://JesusVacca.github.io/neuroCode",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
