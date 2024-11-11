@@ -1,0 +1,120 @@
+.header{
+    width: 100%;
+    height: auto;
+    padding: 1.4em 2em;
+    background: var(--eerie-black);
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--black-olive);
+    justify-content: space-between;
+}
+.header .hamburguesa{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+    display: none;
+    place-content: center;
+    font-size: 18px;
+    color: white;
+}
+.header ul{
+    list-style: none;
+    display: flex;
+}
+
+.header ul li{
+    min-width: 130px;
+    height: auto;
+    margin-left: .2em;
+}
+.header li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--white);
+    padding: .3em .6em;
+    text-align: center;
+    position: relative;
+    border: 2px solid transparent;
+    transition: all .2s ease-in-out;
+    border-radius: .2em;
+}
+.header li a::before{
+    position: absolute;
+    content: "";
+    bottom: -2.5px;
+    left: calc(50% - (50px / 2));
+    width: 0px;
+    height: 3px;
+    background: var(--flame);
+    transition: all .2s ease-in-out;
+    border-radius: .4em;
+}
+.header li a.focused{
+    border-top-color: var(--flame);
+    border-right-color: var(--flame);
+    border-left-color: var(--black-olive);
+    border-bottom-color: var(--black-olive);
+}
+.header li a.focused::before{display: none;}
+.header li:hover a::before{
+    width: 50px;
+}
+.header li i{
+    margin-right: .5em;
+}
+
+
+@media screen and (max-width:1024px) {
+    .header .hamburguesa{
+        position: fixed;
+        display: grid;
+        z-index: 6;
+        border: inherit;
+        right: 1em;
+        border: 1px solid var(--black-olive);
+    }
+    .header nav{
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translateY(0%);
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: .3em;
+        transition: all .2s ease-in-out;
+    }
+    .header nav.hidden{
+        transform: translateY(-100%);
+    }
+    .header ul{
+        max-width: 90%;
+        width: 100%;
+        height: 90%;
+        border: 1px solid var(--black-olive);
+        flex-direction: column;
+        padding: 1em .2em;
+        border-radius: inherit;
+        background: inherit;
+    }
+
+    .header ul li{
+        margin: .1em 0em;
+
+    }
+    .header li a{
+        text-align: start;
+    }
+    .header li a::before{display: none;}
+}

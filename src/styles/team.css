@@ -1,0 +1,98 @@
+.team{
+    width: 100%;
+    height: calc(calc(100% - 65px ) - var(--header-height));
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,minmax(min(300px,100%),310px)
+    );
+    place-content: center;
+    gap: 1em;
+    padding: 1em;
+}
+.team .item-team{
+    aspect-ratio: 1;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+.item-team img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: inherit;
+    object-fit: cover;
+}
+.item-team .description{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: var(--eerie-black);
+    animation: reveal .3s ease-in-out;
+}
+.item-team .description.reveal{
+    height: auto;
+}
+.item-team .description p{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--white);
+}
+.item-team .description .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-team .description .social a{
+    border: 1px solid transparent;
+    width: auto;
+    height: auto;
+    display: grid;
+    place-content: center;
+    font-size: 1.5em;
+    text-decoration: none;
+    overflow: hidden;
+    margin: .3em;
+}
+.item-team .description .social a:nth-child(1){color: rgb(29, 29, 233);}
+.item-team .description .social a:nth-child(2){color: rgb(240, 20, 20);}
+.item-team .description .social a:nth-child(3){color: rgb(29, 233, 53);}
+
+.item-team .hamburguesa{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    font-size: 1em;
+    position: absolute;
+    right: .5em;
+    top: .5em;
+    border: 1px solid var(--black-olive);
+    background: var(--eerie-black);
+    color: var(--white);
+    cursor: pointer;
+    z-index: 2;
+}
+.item-team .hamburguesa:hover{
+    background: var(--flame);
+    border-color: transparent;
+    box-shadow: 2px 2px 20px var(--flame);
+}
+@keyframes reveal {
+    from{
+        height: 40px;
+    }to{
+        height: auto;
+    }
+}
+
+@media screen and (max-width:1124px) {
+    .team{
+        height: auto;
+    }    
+}

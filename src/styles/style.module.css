@@ -1,0 +1,74 @@
+.logotipe{
+    width: auto;
+    height: 40px;
+    border: 1px solid transparent;
+    display: grid;
+    place-content: center;
+    position: relative;
+    margin: 0em .1em;
+}
+.logotipe h1{
+    font-size: 20px;
+    color: var(--white);
+}
+.logotipe h1 i{
+    position: absolute;
+    font-size: 1.2em;
+    top: calc(calc(1.2em / 2) * -1);
+    left: calc(55% - calc(1.5em / 2));
+}
+
+.spinner_content{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.081);
+    display: grid;
+    place-content: center;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.spinner_content .spinner{
+    width: 70px;
+    height: 70px;
+    border: 7px solid transparent;
+    border-radius: 50%;
+    border-right-color: var(--flame);
+    border-left-color: var(--eerie-black);
+    animation:rotate 1s linear infinite;
+    position: relative;
+    display: grid;
+    place-content: center;
+}
+.spinner_content .spinner .spinner_child{
+    width: 35px;
+    height: 35px;
+    border-radius: inherit;
+    border: calc(7px / 2) solid transparent;
+    border-right-color: var(--flame);
+    border-left-color: var(--eerie-black);
+    animation:rotate 2s linear infinite;
+}
+
+.footer{
+    width: 100%;
+    height: auto;
+    padding: 1.5em 1em;
+    background: var(--eerie-black);
+    color: var(--white);
+    border-top: 1px solid var(--black-olive);
+}
+.footer .copy{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(360deg);
+    }
+}

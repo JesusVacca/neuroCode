@@ -1,0 +1,98 @@
+.login{
+    width: 100%;
+    height: calc(calc(100% - 65px) - var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2em;
+}
+
+.login .form{
+    width: 400px;
+    height: auto;
+    padding: 1em;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: .3em;
+}
+.login .form h3{
+    font-size: 18px;
+    color: var(--flame);
+    padding: .5em 0em;
+    border-bottom: 1px solid;
+    margin-bottom: .4em;
+}
+.form .form-row{
+    width: 100%;
+    margin: .5em 0em;
+    position: relative;
+    border-radius: inherit;
+}
+.form .form-row i{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    aspect-ratio: 1;
+    border: 1px solid var(--border-color);
+    display: grid;
+    place-content: center;
+    font-size: 18px;
+    background: var(--eerie-black);
+    color: var(--white);
+}
+.form .form-row input{
+    width: 100%;
+    padding: .5em 2em;
+    border: 1px solid var(--border-color);
+    font-size: 16px;
+    background: var(--white);
+    color: var(--eerie-black);
+    outline: none;
+    text-align: center;
+    border-radius: inherit;
+}
+.form .form-row label{
+    display: flex;
+    text-align: center;
+}
+.form .form-row label input{
+    width: 15px;
+    height: 15px;
+    margin-right: .2em;
+    outline:none;
+    cursor: pointer;
+}
+.form .form-row a{
+    text-decoration: none;
+    color: var(--flame);
+}
+.form.left .form-row input{text-align: start; padding: .5em 1em;}
+
+.form .form-row input[type='submit'],
+.form.left .form-row input[type='submit']{
+    color: var(--white);
+    background: var(--flame);
+    border-color: var(--flame);
+    cursor: pointer;
+    text-align: center;
+}
+
+.form .form-row.enlaces{
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    padding: 0em .2em;
+}
+.form .form-row.enlaces button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 12px;
+    color: var(--flame);
+}
+
+@media screen and (max-width:400px) {
+    .login .form{
+        width: 100%;
+    }
+}

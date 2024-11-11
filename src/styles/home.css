@@ -1,0 +1,104 @@
+.home{
+    width: 100%;
+    height: calc(100% - var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--eerie-black);
+}
+.home .carousel{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+}
+.home .carousel .buttons{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.home .carousel .buttons button{
+    border-radius: 50%;
+    background: transparent;
+    color: var(--flame);
+    cursor: pointer;
+    border: none;
+    font-size: 2em;
+}
+.home .carousel .carousel-content{
+    min-width: 300%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    transition: all .2s ease-in-out;
+}
+.home .carousel .carousel-slide{
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(0%);
+}
+.home .carousel .carousel-slide h3{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: clamp(30px, 5vw, 45px);
+    color: var(--flame);
+}
+.home .carousel .carousel-slide h3,
+.home .carousel .carousel-slide p {
+    margin: .4em 0em;
+}
+.home .carousel .carousel-slide p{
+    width: 80%;
+    text-align: center;
+    font-size: clamp(14px, 2rem, 20px);
+    color: var(--white);
+
+}
+.home .carousel .carousel-slide button{
+    border: 1px solid var(--flame);
+    padding: .4em 2em;
+    text-align: center;
+    background: transparent;
+    color: var(--white);
+    font-size: 18px;
+    border-radius: 1em;
+    margin: .9em auto;
+}
+.home .carousel .carousel-slide button:hover{
+    background: var(--flame);
+    color: var(--white);
+    box-shadow: 
+        2px 2px 20px var(--flame),
+        2px 2px 20px var(--flame),
+        2px 2px 20px var(--flame)
+    ;
+    cursor: pointer;
+}
+.home .carousel .carousel-slide.active h3{
+    animation: transicion .5s ease-in-out;
+}
+.home .carousel .carousel-slide.active p{
+    animation: transicion .7s ease-in-out;
+}
+.home .carousel .carousel-slide.active button{
+    animation: transicion .9s ease-in-out;
+}
+
+@keyframes transicion {
+    50%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
