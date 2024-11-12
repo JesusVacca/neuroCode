@@ -1,18 +1,24 @@
 .contact{
     width: 100%;
-    height: calc(100% - calc(var(--header-height) + 65px ));
-    padding: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: calc(100% - var(--header-height));
+    padding: 2em 1em;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,minmax(min(400px,100%),450px)
+    );
+    place-content: center;
+    gap: 1em;
+    position: relative;
 }
 .contact .form-contact{
-    width: 450px;
     height: auto;
     padding: 1em;
     background: var(--white);
     border-radius: .3em;
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .contact .form-contact .form-row{
     width: 100%;
@@ -22,7 +28,7 @@
 .contact .form-contact .form-row input,
 .contact .form-contact .form-row textarea{
     width: 100%;
-    padding: .4em 1em;
+    padding: .5em 1em;
     text-align: start;
     border: 1px solid var(--border-color);
     border-radius: inherit;
@@ -43,9 +49,59 @@
     text-align: center;
 }
 
-@media screen and (max-width:450px) {
+.contact .info{
+    background: var(--flame);
+    color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: .3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .4em 1em;
+}
+.contact .info .info-item{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: .5em;
+    align-items: center;
+    margin: .4em 0em;
+}
+.contact .info .info-item span{
+    border: 1px solid transparent;
+    display: grid;
+    place-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: .2em;
+    margin-right: .7em;
+    transition: all .2s ease-in-out;
+}
+.contact .info .info-item:hover span{
+    background: var(--eerie-black);
+}
+.contact .info .info-item i{
+    font-size: 1.7em;
+}
+
+.contact .info .info-item .info-content h4{
+    font-size: 22px;
+}
+.contact .info .info-item .info-content p{
+    font-size: 16px;
+}
+.contact .info .info-item .info-content a{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--white);
+}
+@media screen and (max-width:960px) {
+    .contact{height: auto;}
     
-    .contact .form-contact{
-        width: 100%;
-    }
+}
+
+@keyframes move {
+    0%{transform: translateX(50px);}
 }

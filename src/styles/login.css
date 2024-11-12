@@ -76,7 +76,9 @@
     cursor: pointer;
     text-align: center;
 }
-
+.form .form-row input:focus{
+    border-color: var(--flame);
+}
 .form .form-row.enlaces{
     display: flex;
     font-size: 12px;

@@ -23,9 +23,9 @@ export default function Home(props) {
   const porcentaje = 100 / carousel.length;
 
   useEffect(() => {
+    props.setElementFocus(0);
     const interval = setInterval(moveRightCarousel, 7000);
     return () => clearInterval(interval);
-    props.setElementFocus(0);
   });
 
   const moveRightCarousel = () => {
