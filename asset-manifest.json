@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.0ae061f6.css",
-    "main.js": "/static/js/main.2dff7e6e.js",
-    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
-    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
-    "index.html": "/index.html",
-    "main.0ae061f6.css.map": "/static/css/main.0ae061f6.css.map",
-    "main.2dff7e6e.js.map": "/static/js/main.2dff7e6e.js.map"
+    "main.css": "/neuroCode/static/css/main.13e130bf.css",
+    "main.js": "/neuroCode/static/js/main.2dff7e6e.js",
+    "static/media/bootstrap-icons.woff?": "/neuroCode/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/neuroCode/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "index.html": "/neuroCode/index.html",
+    "main.13e130bf.css.map": "/neuroCode/static/css/main.13e130bf.css.map",
+    "main.2dff7e6e.js.map": "/neuroCode/static/js/main.2dff7e6e.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ae061f6.css",
+    "static/css/main.13e130bf.css",
     "static/js/main.2dff7e6e.js"
   ]
 }
